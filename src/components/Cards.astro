@@ -1,0 +1,70 @@
+---
+const productos = [
+  {
+    nombre: "Vaso Personalizado",
+    precio: "10.00 €",
+    descripcion:
+      "Disfruta tu bebida favorita en un vaso que refleje tu estilo. Personalízalo con tu nombre, frase o diseño único para regalar o consentirte.",
+    imagen: "../assets/cuaderno100.png",
+  },
+  {
+    nombre: "Marcapáginas",
+    precio: "2.50 €",
+    descripcion:
+      "Haz que cada lectura sea especial con un marcapáginas personalizado. Ideal para regalar a lectores apasionados o acompañar tus libros favoritos.",
+    imagen: "../assets/cuaderno100.png",
+  },
+  {
+    nombre: "Cuaderno 100 hojas",
+    precio: "19.50 €",
+    descripcion:
+      "El cuaderno perfecto para plasmar tus ideas, proyectos o journaling. Con tapas personalizadas y 100 hojas de inspiración para ti.",
+    imagen: "../assets/cuaderno100.png",
+  },
+  {
+    nombre: "Cuaderno 80 hojas",
+    precio: "15.50 €",
+    descripcion:
+      "Ligero y práctico, ideal para el día a día. Personalízalo con tu nombre o diseño favorito y lleva tus pensamientos a todas partes.",
+    imagen: "../assets/cuaderno100.png",
+  },
+  {
+    nombre: "Mini Agenda 60 hojas",
+    precio: "5.00 €",
+    descripcion:
+      "Pequeña, versátil y encantadora. Una mini agenda personalizada para organizar tu día con estilo, perfecta para tu bolso o escritorio.",
+    imagen: "../assets/cuaderno100.png",
+  },
+  {
+    nombre: "Álbum de bebé",
+    precio: "35.00 €",
+    descripcion:
+      "Guarda los momentos más dulces y memorables de tu bebé. Personaliza su portada y crea un tesoro lleno de recuerdos únicos.",
+    imagen: "../assets/cuaderno100.png",
+  },
+];
+
+import cuaderno from "../assets/cuaderno100.png";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-20">
+  {
+    productos.map((producto) => (
+      <div class=" bg-[#f2f2f2] rounded-lg p-6 flex flex-col items-center text-center hover:animate-bouncing">
+        <img
+          src={cuaderno.src}
+          alt={producto.nombre}
+          class="w-full h-56 object-cover  mb-4 rounded"
+        />
+        <h2 class="text-xl font-semibold mb-2">{producto.nombre}</h2>
+        <p class="text-gray-700 mb-4">{producto.descripcion}</p>
+        <span class="text-lg font-bold text-[var(--color-primario)]">
+          {producto.precio}
+        </span>
+        <a href={`https://api.whatsapp.com/send?phone=+351915213426&text=Quiero mas informacion de ${producto.nombre}`} class="mt-4 inline-block bg-[var(--color-primario)] text-white px-4 py-2 rounded-full hover:bg-[var(--color-secundario)] transition hover:text-white">Comprar</a>
+      </div>
+    ))
+  }
+</div>
+
+

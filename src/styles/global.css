@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+
+
+
+:root {
+    --color-primario: #d0a556;
+    --color-secundario: #abb382;
+    --color-terciario: #f5d2ce;
+    --color-acento: #b5793a;
+}

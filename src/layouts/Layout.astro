@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Danigrafia</title>
+  </head>
+  <body>
+    <slot />
+	<Footer />
+  </body>
+</html>
+
+<style is:global>
+  @import "tailwindcss";
+  @plugin "@midudev/tailwind-animations";
+
+  html,
+  body {
+	background-color: #fff;
+    font-family: "Manrope Variable", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
