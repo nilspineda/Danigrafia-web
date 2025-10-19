@@ -20,3 +20,5 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── pages
 │       └── index.astro
 └── package.json
+
+Desarrollado por Nils Pineda Vargas
